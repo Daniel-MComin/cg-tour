@@ -1,0 +1,185 @@
+.footer {
+  background: #f78d00;
+  color: #fff;
+  padding: 64px 0 0 0;
+  font-family: Poppins, sans-serif;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+
+    .icon-compass {
+      /* Substitua por SVG ou use uma fonte de ícones */
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background: url('/assets/icons/compass.svg') no-repeat center/contain;
+    }
+    .brand-title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+
+  .brand-desc {
+    color: #fff;
+    opacity: 0.85;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 12px;
+    .social-btn {
+      background: rgba(24, 74, 87, 0.1);
+      padding: 8px;
+      border-radius: 8px;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      &:hover {
+        background: rgba(24, 74, 87, 0.2);
+      }
+      .icon-instagram, .icon-globe, .icon-mail {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        /* Substitua por SVGs reais */
+        background-size: contain;
+      }
+      .icon-instagram { background-image: url('/assets/icons/instagram.svg'); }
+      .icon-globe { background-image: url('/assets/icons/globe.svg'); }
+      .icon-mail { background-image: url('/assets/icons/mail.svg'); }
+    }
+  }
+
+  .footer-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+
+  .footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      margin-bottom: 12px;
+      a {
+        color: #fff;
+        opacity: 0.85;
+        text-decoration: none;
+        transition: color 0.2s, opacity 0.2s;
+        &:hover {
+          color: #184A57;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .footer-contact {
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      .icon-mappin, .icon-mail {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-size: contain;
+      }
+      .icon-mappin { background-image: url('/assets/icons/map-pin.svg'); }
+      .icon-mail { background-image: url('/assets/icons/mail.svg'); }
+      a {
+        color: #fff;
+        opacity: 0.85;
+        text-decoration: none;
+        &:hover {
+          color: #184A57;
+          opacity: 1;
+        }
+      }
+    }
+    .newsletter {
+      background: rgba(24, 74, 87, 0.08);
+      padding: 16px;
+      border-radius: 12px;
+      margin-top: 16px;
+      h4 {
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .newsletter-desc {
+        font-size: 0.95em;
+        margin-bottom: 12px;
+        opacity: 0.85;
+      }
+      .newsletter-form {
+        display: flex;
+        gap: 8px;
+        input {
+          flex: 1;
+          padding: 8px 12px;
+          border: none;
+          border-radius: 8px;
+          font-size: 1em;
+        }
+        button {
+          background: #184A57;
+          color: #fff;
+          border: none;
+          padding: 8px 18px;
+          border-radius: 8px;
+          font-size: 1em;
+          cursor: pointer;
+          transition: background 0.2s;
+          &:hover {
+            background: #0f2c36;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(24, 74, 87, 0.15);
+    margin-top: 48px;
+    padding: 32px 0 24px 0;
+    text-align: center;
+    p {
+      color: #fff;
+      opacity: 0.7;
+      font-size: 1em;
+      a {
+        color: #fff;
+        opacity: 0.85;
+        margin-left: 8px;
+        text-decoration: none;
+        &:hover {
+          color: #184A57;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
