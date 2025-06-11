@@ -1,0 +1,30 @@
+<div class="card" [class.selected]="isSelected">
+  <div class="image-wrapper">
+    <img [src]="destination.image" [alt]="destination.name" />
+    <div class="category-badge">
+      {{ destination.category }}
+    </div>
+  </div>
+  <div class="card-header">
+    <h3>{{ destination.name }}</h3>
+    <div class="location">
+      <span class="icon">📍</span>
+      {{ destination.location }}
+    </div>
+  </div>
+  <div class="card-content">
+    <span class="duration">Duração: {{ destination.duration }}</span>
+  <button
+  *ngIf="!isSelected; else removeBtn"
+  (click)="onAdd()"
+  class="add-btn"
+>
+  <span class="icon">+</span> Adicionar ao Itinerário
+</button>
+<ng-template #removeBtn>
+  <button (click)="onRemove()" class="remove-btn">
+    <span class="icon">🗑️</span> Remover
+  </button>
+</ng-template>
+  </div>
+</div>

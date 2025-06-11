@@ -1,0 +1,76 @@
+@use '../../../styles/variables' as *;
+
+.navbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $background-color;
+  padding: 0.5rem 1rem;
+  font-family: Poppins, sans-serif;
+}
+
+.navbar-logo {
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar-links li a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 700;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background: $secondary-color;
+    transition: width 0.3s ease;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    border-radius: 2px;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    width: 100%;
+  }
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+}

@@ -1,0 +1,55 @@
+<section id="planejar" class="background">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="title">Planeje Sua Viagem</h2>
+      <p class="subtitle">
+        Crie seu itinerário personalizado selecionando os destinos disponíveis.
+      </p>
+    </div>
+
+    <div class="tabs">
+      <button [class.active]="tab === 'destinos'" (click)="tab = 'destinos'">
+        Destinos
+      </button>
+      <button [class.active]="tab === 'itinerario'" (click)="tab = 'itinerario'">
+        Meu Itinerário ({{ selectedDestinations.length }})
+      </button>
+    </div>
+
+    <div *ngIf="tab === 'destinos'">
+      <div class="search-input-wrapper">
+      <input
+        type="text"
+        placeholder="Buscar destinos..."
+        [(ngModel)]="searchTerm"
+        class="search-input"
+      />
+      </div>
+
+      <div class="card-grid">
+        <app-card
+          *ngFor="let destination of filteredDestinations"
+          [destination]="destination"
+          [isSelected]="isSelected(destination)"
+          (add)="addToItinerary($event)"
+        ></app-card>
+      </div>
+    </div>
+
+    <div *ngIf="tab === 'itinerario'" class="itinerary-section">
+      <div class="it-wrapper">
+      <div *ngIf="selectedDestinations.length === 0" class="empty-itinerary">
+        Nenhum destino adicionado ao itinerário.
+      </div>
+      </div>
+      <div class="card-grid">
+        <app-card
+          *ngFor="let destination of selectedDestinations"
+          [destination]="destination"
+          [isSelected]="true"
+          (remove)="removeFromItinerary(destination.id)"
+        ></app-card>
+      </div>
+    </div>
+  </div>
+</section>

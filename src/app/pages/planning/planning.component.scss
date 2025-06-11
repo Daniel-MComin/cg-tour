@@ -1,0 +1,87 @@
+.text-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px;
+  font-family: Poppins, sans-serif;
+
+  .title{
+    font-size: 32px;
+    font-weight: 600;
+    color: #184A57;
+    margin-bottom: 16px;
+  }
+
+  .subtitle{
+    font-size: 18px;
+    color: #5e5e5e;
+    margin-bottom: 10px;
+  }
+}
+
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  
+
+  button {
+    padding: 10px 24px;
+    border: none;
+    background: #eee;
+    border-radius: 8px 8px 0 0;
+    font-weight: 600;
+    cursor: pointer;
+    &.active {
+      background: #184A57;
+      color: #fff;
+    }
+  }
+}
+
+.itinerary-section{
+  padding-bottom: 100px;
+  padding-top: 20px;
+}
+
+.card-grid {
+  display: grid;
+  padding: 10px 100px 0 100px;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.search-input-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.it-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+
+  .empty-itinerary{
+    padding: 150px;
+  }
+}
