@@ -27,49 +27,49 @@ export class PlanningComponent {
   destinations: Destination[] = [
     {
       id: 1,
-      name: "Cristo Redentor",
-      location: "Rio de Janeiro, Brasil",
-      image: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      category: "Monumento",
+      name: "Parque de Vila Velha",
+      location: "Ponta Grossa, Paraná",
+      image: "https://upload.wikimedia.org/wikipedia/commons/b/b1/A_Ta%C3%A7a_-_Parque_Estadual_de_Vila_Velha.jpg",
+      category: "Parque Natural",
       duration: "2-3 horas"
     },
     {
       id: 2,
-      name: "Machu Picchu",
-      location: "Cusco, Peru",
-      image: "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      category: "Sítio Arqueológico",
+      name: "Ponte dos Arcos",
+      location: "Porto Amazonas, Paraná",
+      image: "https://chacarakiwidaserra.com.br/wp-content/uploads/2021/09/fd87bb0497de5afbbfed3a9b2fc686038a017505-1024x768.jpg",
+      category: "Arquitetura",
       duration: "1 dia"
     },
     {
       id: 3,
-      name: "Torre Eiffel",
-      location: "Paris, França",
-      image: "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      category: "Monumento",
-      duration: "1-2 horas"
+      name: "Buraco do Padre",
+      location: "Ponta Grossa, Paraná",
+      image: "https://curitibacult.com.br/wp-content/uploads/2020/02/buraco-do-padre-ponta-grossa-1024x768.jpg",
+      category: "Parque Natural",
+      duration: "1-3 horas"
     },
     {
       id: 4,
-      name: "Santorini",
-      location: "Grécia",
-      image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      category: "Praia",
-      duration: "3-5 dias"
+      name: "Frederica’s Tortas Holandesas",
+      location: "Carambeí, Paraná",
+      image: "https://www.camposgeraisdoparana.com.br/wp-content/uploads/2022/01/3c50c1_af2a97f5c12c48f8a5af5316bb06386e_mv2.jpg",
+      category: "Restaurante",
+      duration: "1-4 horas"
     },
     {
       id: 5,
-      name: "Bali",
-      location: "Indonésia",
-      image: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      category: "Natureza",
-      duration: "5-7 dias"
+      name: "Recanto dos Papagaios",
+      location: "Palmeira, Paraná",
+      image: "https://www.camposgeraisdoparana.com.br/wp-content/uploads/2021/11/recanto3.jpg",
+      category: "Arquitetura",
+      duration: "1-4 horas"
     },
     {
       id: 6,
-      name: "Coliseu",
-      location: "Roma, Itália",
-      image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      name: "Parque Histório Carambeí",	
+      location: "Carambeí, Paraná",
+      image: "https://www.camposgeraisdoparana.com.br/wp-content/uploads/2021/11/museu.jpg",
       category: "Histórico",
       duration: "2-3 horas"
     }
