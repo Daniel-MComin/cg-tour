@@ -102,3 +102,53 @@
     }
   }
 }
+
+
+@media (max-width: 768px) {
+  .container {
+    height: 60vh;
+
+    .content {
+      grid-template-columns: 1fr;
+      padding: 10px;
+
+      .titles {
+        padding: 50px 20px;
+        text-align: center;
+
+        h1 {
+          font-size: 2.5em;
+        }
+
+        h2 {
+          font-size: 2.5em;
+        }
+      }
+
+      .explore {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+
+        .explore-text {
+          text-align: center;
+
+          p {
+            margin-top: 8px;
+            margin-bottom: 16px;
+          }
+
+          .explore-buttons {
+            flex-direction: column;
+            gap: 10px;
+
+            .btn.btn-primary {
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

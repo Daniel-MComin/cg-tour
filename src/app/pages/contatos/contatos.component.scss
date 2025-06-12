@@ -183,3 +183,13 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .social-links {
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+}
