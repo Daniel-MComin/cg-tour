@@ -37,19 +37,88 @@
     </div>
 
     <div *ngIf="tab === 'itinerario'" class="itinerary-section">
-      <div class="it-wrapper">
-      <div *ngIf="selectedDestinations.length === 0" class="empty-itinerary">
-        Nenhum destino adicionado ao itinerário.
+  <div *ngIf="selectedDestinations.length === 0" class="empty-itinerary text-center py-16">
+    <div class="max-w-md mx-auto">
+      <div class="mb-4">
+        <i class="fa-solid fa-calendar fa-3x text-muted-foreground"></i>
       </div>
-      </div>
-      <div class="card-grid">
-        <app-card
-          *ngFor="let destination of selectedDestinations"
-          [destination]="destination"
-          [isSelected]="true"
-          (remove)="removeFromItinerary(destination.id)"
-        ></app-card>
+      <h3 class="text-xl font-semibold mb-2">Seu itinerário está vazio</h3>
+      <p class="text-muted-foreground mb-6">
+        Comece adicionando destinos da aba "Destinos" para criar seu itinerário personalizado.
+      </p>
+    </div>
+  </div>
+
+  <div *ngIf="selectedDestinations.length > 0" class="custom-itinerary space-y-6">
+    <div class="text-center">
+      <h3 class="text-2xl font-bold mb-2">Seu Itinerário Personalizado</h3>
+      <p class="text-muted-foreground">
+        {{ selectedDestinations.length }} destino(s) selecionado(s)
+      </p>
+    </div>
+
+    <div class="grid-gap-6">
+      <div class="itinerary-card" *ngFor="let destination of selectedDestinations; let i = index">
+        <div class="flex-col-md">
+          <div class="img-col">
+            <img [src]="destination.image" [alt]="destination.name" class="itinerary-img" />
+          </div>
+          <div class="info-col">
+            <div class="flex-between mb-4">
+              <div>
+                <span class="badge">{{ i + 1 }}</span>
+                <span class="itinerary-title">{{ destination.name }}</span>
+                <div class="itinerary-location">
+                  <i class="fa-solid fa-map-pin"></i>
+                  {{ destination.location }}
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label class="label">
+                  <i class="fa-solid fa-calendar"></i> Data da Visita
+                </label>
+                <input
+                  type="date"
+                  class="input"
+                  [value]="destination.date || ''"
+                  (change)="updateDestination(destination.id, { })"
+                />
+              </div>
+              <div class="col">
+                <label class="label">Duração</label>
+                <input class="input bg-muted" [value]="destination.duration" readonly />
+              </div>
+            </div>
+            <div>
+              <label class="label">
+                <i class="fa-solid fa-pen"></i> Notas Pessoais
+              </label>
+              <textarea
+                class="textarea"
+                placeholder="Adicione suas observações, horários específicos, ou lembretes..."
+                [value]="destination.notes || ''"
+                (input)="updateDestination(destination.id, {  })"
+                rows="3"
+              ></textarea>
+            </div>
+            <button class="remove-btn" (click)="removeFromItinerary(destination.id)">
+      <i class="fa-solid fa-minus"></i>
+      Remover
+    </button>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="text-center mt-8">
+      <button class="btn btn-lg px-8" >
+        Salvar Itinerário
+      </button>
+    </div>
+  </div>
+</div>
+
   </div>
 </section>

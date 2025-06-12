@@ -10,6 +10,8 @@ interface Destination {
   image: string;
   category: string;
   duration: string;
+  notes?: string;
+  date?: string;
 }
 
 interface SelectedDestination extends Destination {}
@@ -51,7 +53,7 @@ export class PlanningComponent {
     },
     {
       id: 4,
-      name: "Frederica’s Tortas Holandesas",
+      name: "Frederica’s Tortas",
       location: "Carambeí, Paraná",
       image: "https://www.camposgeraisdoparana.com.br/wp-content/uploads/2022/01/3c50c1_af2a97f5c12c48f8a5af5316bb06386e_mv2.jpg",
       category: "Restaurante",
@@ -67,7 +69,7 @@ export class PlanningComponent {
     },
     {
       id: 6,
-      name: "Parque Histório Carambeí",	
+      name: "Parque Histórico",	
       location: "Carambeí, Paraná",
       image: "https://www.camposgeraisdoparana.com.br/wp-content/uploads/2021/11/museu.jpg",
       category: "Histórico",
@@ -90,15 +92,15 @@ export class PlanningComponent {
     }
   }
 
-  removeFromItinerary(destinationId: number) {
-    this.selectedDestinations = this.selectedDestinations.filter(item => item.id !== destinationId);
-  }
-
   updateDestination(destinationId: number, updates: Partial<SelectedDestination>) {
-    this.selectedDestinations = this.selectedDestinations.map(item =>
-      item.id === destinationId ? { ...item, ...updates } : item
-    );
-  }
+  this.selectedDestinations = this.selectedDestinations.map(dest =>
+    dest.id === destinationId ? { ...dest, ...updates } : dest
+  );
+}
+
+removeFromItinerary(destinationId: number) {
+  this.selectedDestinations = this.selectedDestinations.filter(dest => dest.id !== destinationId);
+}
 
   isSelected(destination: any): boolean {
   return this.selectedDestinations && this.selectedDestinations.some((d: any) => d.id === destination.id);

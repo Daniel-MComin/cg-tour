@@ -26,14 +26,13 @@
     margin-bottom: 16px;
 
     .icon-compass {
-      /* Substitua por SVG ou use uma fonte de ícones */
       display: inline-block;
       width: 32px;
       height: 32px;
       background: url('/assets/icons/compass.svg') no-repeat center/contain;
     }
     .brand-title {
-      font-size: 2rem;
+      font-size: 4rem;
       font-weight: bold;
     }
   }
@@ -62,7 +61,6 @@
         width: 20px;
         height: 20px;
         display: inline-block;
-        /* Substitua por SVGs reais */
         background-size: contain;
       }
       .icon-instagram { background-image: url('/assets/icons/instagram.svg'); }
@@ -187,9 +185,5 @@
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
-  }
-  .social-links {
-    justify-content: center;
-    margin-bottom: 16px;
   }
 }

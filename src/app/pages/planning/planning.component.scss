@@ -89,3 +89,171 @@
     padding: 150px;
   }
 }
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+
+  button {
+    padding: 10px 24px;
+    border: none;
+    background: #184A57;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      background: #0f3a45;
+    }
+  }
+}
+
+.custom-itinerary .itinerary-card {
+  max-width: 600px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins, sans-serif;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+  margin-bottom: 24px;
+}
+
+.flex-col-md {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.img-col {
+  flex: 1 1 200px;
+  min-width: 200px;
+  max-width: 250px;
+  overflow: hidden;
+
+  .itinerary-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 180px;
+  }
+}
+
+.info-col {
+  flex: 2 1 0;
+  padding: 38px;
+  background: #fff;
+  position: relative;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.badge {
+  background: #F78D00;
+  color: #fff;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.itinerary-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.itinerary-location {
+  color: #888;
+  font-size: 0.95em;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  i {
+    margin-right: 2px;
+  }
+}
+
+.grid-gap-6{
+  display: grid;
+  margin: 40px;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.remove-btn {  
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #c0392b;
+  }
+
+  img{
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 8px;
+  font-size: 1em;
+}
+
+.input.bg-muted {
+  background: #eee;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.btn.btn-lg {
+  background: #184A57;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  &:hover {
+    background: #0f2c36;
+  }
+}
+
+.text-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
