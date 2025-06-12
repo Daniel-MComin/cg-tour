@@ -1,1 +1,40 @@
+<section id="experiencias" class="experiencias-section">
+  <div class="container">
+    <div class="text-center mb-16">
+      <h2 class="title">Experiências Prontas</h2>
+      <p class="subtitle">
+        Mais do que apenas destinos, oferecemos experiências transformadoras que criarão memórias para toda vida, veja mais sobre nossas experiências prontas e escolha a que mais combina com você.
+      </p>
+    </div>
 
+    <div class="experiencias-grid">
+      <div
+        class="experience-card"
+        *ngFor="let experience of experiences"
+      >
+        <div class="image-wrapper">
+          <img [src]="experience.image" [alt]="experience.title" />
+          <div class="image-gradient"></div>
+        </div>
+        <div class="experience-content">
+          <div class="experience-header">
+            <div class="icon-bg">
+  <i
+    [ngClass]="{
+      'fa-solid fa-camera': experience.icon === 'camera',
+      'fa-solid fa-mountain': experience.icon === 'mountain',
+      'fa-solid fa-mug-hot': experience.icon === 'mug-hot',
+      'fa-solid fa-landmark': experience.icon === 'landmark'
+    }"
+    class="fa-fw"
+  ></i>
+</div>
+            <h3 class="experience-title">{{ experience.title }}</h3>
+          </div>
+          <p class="experience-desc">{{ experience.description }}</p>
+          <button class="experience-btn">Saiba Mais</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
